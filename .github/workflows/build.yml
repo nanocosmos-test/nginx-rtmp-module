@@ -37,7 +37,7 @@ jobs:
           cp ~/nginx-rtmp-module/support/nginx.conf conf/nginx.conf
           rm docs/html/index.html
           cp ~/nginx-rtmp-module/support/index.html docs/html/index.html
-          auto/configure --prefix=. --add-module=../nginx-rtmp-module --with-openssl=../openssl --with-zlib=../zlib-1.2.11 --with-pcre=../pcre-8.45
+          auto/configure --prefix=. --add-module=../nginx-rtmp-module --with-openssl=../openssl --with-zlib=../zlib-1.2.12 --with-pcre=../pcre-8.45
       - name: Build nginx
         run: |
           cd ~/nginx
@@ -104,7 +104,7 @@ jobs:
           rm docs/html/index.html
           cp ~/nginx-rtmp-module/support/index.html docs/html/index.html
           sed -i 's/-WX/ /' auto/cc/msvc
-          auto/configure --prefix=. --add-module=../nginx-rtmp-module --with-openssl=../openssl --with-zlib=../zlib-1.2.11 --with-pcre=../pcre-8.45 --with-cc=cl
+          auto/configure --prefix=. --add-module=../nginx-rtmp-module --with-openssl=../openssl --with-zlib=../zlib-1.2.12 --with-pcre=../pcre-8.45 --with-cc=cl
       - name: Build nginx
         shell: bash
         run: |
